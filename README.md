@@ -26,38 +26,39 @@
 
 ## 📁 Project Structure
 tasklab/
-├── tasklab-backend/               # Backend code (Express + MongoDB)
-│   ├── controllers/               # Request handlers / controller logic
-│   │   ├── authController.js      # Handles signup/login
-│   │   └── taskController.js      # Handles task-related operations
-│   ├── database/                  # DB connection and models
-│   │   ├── db.js                  # MongoDB connection setup
+├── tasklab-backend/                ── Backend code (Express + MongoDB)
+│   ├── controllers/                ── Request handlers / controller logic
+│   │   ├── authController.js       ── Handles signup/login
+│   │   └── taskController.js       ── Handles task-related operations
+│   ├── database/                   ── DB connection and models
+│   │   ├── db.js                   ── MongoDB connection setup
 │   │   └── models/
-│   │       ├── task.js            # Task schema
-│   │       └── user.js            # User schema
+│   │       ├── task.js             ── Task schema
+│   │       └── user.js             ── User schema
 │   ├── middleware/
-│   │   └── verifyToken.js         # JWT token validation
-│   ├── routes/                    # Route definitions
-│   │   ├── auth.js                # Auth routes (login/signup)
-│   │   └── tasks.js               # Task routes (CRUD operations)
-│   ├── .env                       # Environment variables (DB URI, JWT secret)
-│   └── server.js                  # Main Express server entry point
+│   │   └── verifyToken.js          ── JWT token validation middleware
+│   ├── routes/                     ── Route definitions
+│   │   ├── auth.js                 ── Auth routes (login/signup)
+│   │   └── tasks.js                ── Task routes (CRUD operations)
+│   ├── .env                        ── Environment variables (DB URI, JWT secret)
+│   └── server.js                   ── Entry point for Express server
 │
-├── tasklab-frontend/              # Frontend static files (HTML/CSS/JS)
+├── tasklab-frontend/               ── Frontend static files (HTML/CSS/JS)
 │   ├── assets/
-│   │   └── notes.png              # Decorative/illustrative image
-│   ├── public/                    # Main HTML pages
-│   │   ├── faq.html               # FAQ/help page
-│   │   ├── index.html             # Landing page
-│   │   ├── login.html             # Login form
-│   │   └── signup.html            # Signup form
-│   ├── scripts/                   # Frontend JS logic
-│   │   ├── app.js                 # General DOM/task logic
-│   │   ├── login.js               # Login form handler
-│   │   └── signup.js              # Signup form handler
+│   │   └── notes.png               ── Decorative image
+│   ├── public/                     ── Main HTML pages
+│   │   ├── faq.html                ── FAQ/help page
+│   │   ├── index.html              ── Landing page
+│   │   ├── login.html              ── Login form
+│   │   └── signup.html             ── Signup form
+│   ├── scripts/                    ── Frontend JavaScript
+│   │   ├── app.js                  ── General DOM/task logic
+│   │   ├── login.js                ── Handles login requests
+│   │   └── signup.js               ── Handles signup requests
 │   └── styles/
-│       └── style.css              # Main stylesheet
+│       └── style.css               ── Main stylesheet
 │
-└── package.json                   # Project metadata and dependencies
+└── package.json                    ── Project metadata and dependencies
+
 
 ---

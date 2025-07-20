@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const password = document.getElementById('signupPassword').value;
 
     try {
-      const res = await fetch('http://tasklab-waxy.onrender.com/auth/register', {
+      const res = await fetch('https://tasklab-waxy.onrender.com/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })

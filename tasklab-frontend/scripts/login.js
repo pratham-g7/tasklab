@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({ email, password })
       });
       if (res.ok) {
+        localStorage.setItem('token', (await res.json()).token);
         window.location.href = '/dashboard.html';
       } else {
         const data = await res.json();

@@ -2,7 +2,7 @@ const isLoggedIn = async () => {
     const token = localStorage.getItem("token");
     if (!token) return false;
     try {
-        const response = await fetch("/tasklab-backend/auth/verify_token", {
+        const response = await fetch("http://127.0.0.1:3000/tasklab-backend/auth/verify_token", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -30,3 +30,5 @@ const toggleUi = (loggedIn) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     isLoggedIn().then(toggleUi)});
+
+export default {isLoggedIn}

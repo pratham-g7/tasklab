@@ -6,7 +6,7 @@
 
 ## 🔧 Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
+- **Frontend:** HTML, CSS, JavaScript + jQuery
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB + Mongoose
 - **Auth:** bcrypt + express-session

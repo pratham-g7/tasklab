@@ -7,4 +7,9 @@ const router = express.Router();
 router.post("/login", login);
 router.post("/register", register);
 
+// Verifies token and returns decoded user data
+router.post("/verify", verifyToken, (req, res) => {
+  res.status(200).json({ message: "Token is valid", user: req.user });
+});
+
 export default router;

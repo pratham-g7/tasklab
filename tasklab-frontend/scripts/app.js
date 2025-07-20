@@ -2,7 +2,7 @@ const isLoggedIn = async () => {
     const token = localStorage.getItem("token");
     if (!token) return false;
     try {
-        const response = await fetch("http://localhost:3000/auth/verify", {
+        const response = await fetch("http://tasklab-waxy.onrender.com/auth/verify", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

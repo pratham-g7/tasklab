@@ -1,43 +1,85 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - TaskLab</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- Navbar/Header -->
     <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> 
-            <i class="bi bi-bookmark-star me-3" style="font-size: 1.5rem; color: gold;"></i> <span class="fs-4">TaskLab</span> 
-            </a> 
-            <ul class="nav nav-pills">
-               <li class="nav-item"><a href="index.html" class="nav-link" id="home">Home</a></li>
-               <li class="nav-item"><a href="faq.html" class="nav-link">FAQs</a></li>
-            </ul>
-         </header>
-    </div>
-    <div class="container py-5">
-        <h1 class="mb-4">Dashboard</h1>
-        <p>Welcome to your TaskLab dashboard. Here you can view and manage your active rooms.</p>
-        <ul class="list-group mb-3">
-            <li class="list-group-item">
-                <div class="card mb-3 border-0">
-                    <div class="card-body p-0">
-                        <h5 class="card-title">Room ABC123</h5>
-                        <p class="card-text">Collaborators: 3<br>Status: Active</p>
-                        <a href="#" class="btn btn-primary">Go to Room</a>
-                    </div>
-                </div>
-            </li>
-            <!-- Add more <li class="list-group-item"> for additional rooms -->
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+          <i class="bi bi-bookmark-star me-3" style="font-size: 1.5rem; color: gold;"></i>
+          <span class="fs-4">TaskLab</span>
+        </a>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQs</a></li>
         </ul>
-        <!-- Add more dashboard features as needed -->
+      </header>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="createRoomModal" tabindex="-1" aria-labelledby="createRoomModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-4" id="createRoomModalLabel">Create New Room</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 pt-0">
+            <form>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-3" id="roomName" placeholder="Room Name" />
+                <label for="roomName">Room Name</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Create Room</button>
+              <small class="text-body-secondary">By creating a room, you agree to the terms of use.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+      <h1 class="mb-4">Dashboard</h1>
+      <p>Welcome to your TaskLab dashboard. Here you can view and manage your active rooms.</p>
+
+      <div class="mb-3">
+        <button class="btn btn-primary" id="createRoom">Create New Room</button>
+      </div>
+
+      <ul class="list-group mb-3">
+        <!-- Dynamically loaded rooms will go here -->
+      </ul>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="scripts/dashboard.js"></script>
-</body>
+  </body>
 </html>

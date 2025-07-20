@@ -31,4 +31,12 @@ const toggleUi = (loggedIn) => {
 document.addEventListener("DOMContentLoaded", () => {
     isLoggedIn().then(toggleUi)});
 
+$(".create_tasklab").on("click", () => {
+    window.location.href = "dashboard.html";
+});
+
+$(".join_tasklab").on("click", () => {
+    window.location.href = "dashboard.html";
+});
+
 export default {isLoggedIn}

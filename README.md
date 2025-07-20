@@ -25,7 +25,7 @@
 ---
 
 ## 📁 Project Structure
-<pre> \`\`\`text 
+<pre>
 tasklab/
 ├── tasklab-backend/                  # Backend code (Express + MongoDB)
 │   ├── controllers/                  # Request handlers
@@ -60,6 +60,6 @@ tasklab/
 │       └── style.css                 # Main stylesheet
 │
 └── package.json                      # Project metadata and dependencies
-\`\`\` </pre>
+</pre>
 
 ---

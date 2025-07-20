@@ -25,39 +25,40 @@
 ---
 
 ## 📁 Project Structure
+
 tasklab/
-├── tasklab-backend/                   # Backend code (Express + MongoDB)
-│   ├── controllers/                   # Request handlers / controller logic
-│   │   ├── authController.js          # Handles signup/login
-│   │   └── taskController.js          # Handles task operations
-│   ├── database/                      # DB connection and Mongoose models
-│   │   ├── db.js                      # Connects to MongoDB
+├── tasklab-backend/                  # Backend code (Express + MongoDB)
+│   ├── controllers/                  # Request handlers
+│   │   ├── authController.js         # Handles signup/login logic
+│   │   └── taskController.js         # Handles task operations
+│   ├── database/                     # DB connection and schemas
+│   │   ├── db.js                     # Connects to MongoDB
 │   │   └── models/
-│   │       ├── task.js                # Task schema
-│   │       └── user.js                # User schema
+│   │       ├── task.js               # Task Mongoose schema
+│   │       └── user.js               # User Mongoose schema
 │   ├── middleware/
-│   │   └── verifyToken.js             # JWT auth middleware
-│   ├── routes/                        # Express route definitions
-│   │   ├── auth.js                    # Auth routes (login/signup)
-│   │   └── tasks.js                   # Task routes (CRUD)
-│   ├── .env                           # Environment config (DB URI, JWT secret)
-│   └── server.js                      # Entry point for the Express server
+│   │   └── verifyToken.js            # JWT validation middleware
+│   ├── routes/                       # Express route handlers
+│   │   ├── auth.js                   # Auth routes (login/signup)
+│   │   └── tasks.js                  # Task routes (CRUD)
+│   ├── .env                          # Environment variables (DB URI, JWT secret)
+│   └── server.js                     # Main Express server file
 │
-├── tasklab-frontend/                  # Frontend static site
+├── tasklab-frontend/                 # Frontend files (HTML/CSS/JS)
 │   ├── assets/
-│   │   └── notes.png                  # Decorative image
-│   ├── public/                        # HTML pages
-│   │   ├── faq.html                   # FAQ/help page
-│   │   ├── index.html                 # Landing page
-│   │   ├── login.html                 # Login form
-│   │   └── signup.html                # Signup form
-│   ├── scripts/                       # Frontend JavaScript
-│   │   ├── app.js                     # General DOM/task logic
-│   │   ├── login.js                   # Login request logic
-│   │   └── signup.js                  # Signup request logic
+│   │   └── notes.png                 # Decorative image
+│   ├── public/                       # Static HTML pages
+│   │   ├── faq.html                  # FAQ/help page
+│   │   ├── index.html                # Landing page
+│   │   ├── login.html                # Login page
+│   │   └── signup.html               # Signup page
+│   ├── scripts/                      # Frontend JavaScript logic
+│   │   ├── app.js                    # Main UI logic
+│   │   ├── login.js                  # Login request handler
+│   │   └── signup.js                 # Signup request handler
 │   └── styles/
-│       └── style.css                  # Main CSS file
+│       └── style.css                 # Main stylesheet
 │
-└── package.json                       # Project dependencies and metadata
+└── package.json                      # Project metadata and dependencies
 
 ---

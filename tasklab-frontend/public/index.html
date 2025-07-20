@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>To-Do List</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="/tasklab-frontend/styles/style.css">
+   </head>
+   <body>
+      <div class="container">
+         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> 
+            <i class="bi bi-bookmark-star me-3" style="font-size: 1.5rem; color: gold;"></i> <span class="fs-4">TaskLab</span> 
+            </a> 
+            <ul class="nav nav-pills">
+               <li class="nav-item"><a href="dashboard.html" class="nav-link" id="dashboard">Dashboard</a></li>
+               <li class="nav-item"><a href="faq.html" class="nav-link">FAQs</a></li>
+            </ul>
+            <div class="ms-3 d-flex align-items-center">
+               <a href="signup.html" class="btn btn-outline-primary me-2" id="signup_btn">Sign Up</a>
+               <a href="login.html" class="btn btn-primary" id="login_btn">Login</a>
+            </div>
+         </header>
+      </div>
+      <div class="px-4 pt-5 my-5 text-center border-bottom">
+         <h1 class="display-4 fw-bold text-body-emphasis">TaskLab</h1>
+         <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Quickly set-up and customize tasks and share them with friends, co-workers, or family. <br> Allows real-time marking and task tracking across any device.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"> 
+               <a class="btn btn-secondary btn-lg px-4 me-sm-3 create_tasklab" role="button">Create a new TaskLab</a>
+               <a class="btn btn-secondary btn-lg px-4 join_tasklab" role="button">Join a TaskLab</a>
+            </div>
+         </div>
+         <div class="overflow-hidden" style="max-height: 30vh;">
+            <div class="container px-5"> 
+               <img src="/tasklab-frontend\assets\notes.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy"> 
+            </div>
+         </div>
+      </div>
+      <div class="container px-4 py-5" id="icon-grid">
+         <h2 class="pb-2 border-bottom">Features</h2>
+         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+            <div class="col d-flex align-items-start">
+               <i class="bi bi-bootstrap-fill text-body-secondary flex-shrink-0 me-3" style="font-size: 1.75em;"></i>
+               <div>
+                  <h3 class="fw-bold mb-3 fs-4 text-body-emphasis">Collaborate on tasks in real-time</h3>
+                  <p>Work together seamlessly with anyone by sharing a single link — every task update is instantly visible to all users without needing accounts or logins.</p>
+               </div>
+            </div>
+            <div class="col d-flex align-items-start">
+               <i class="bi bi-cpu-fill text-body-secondary flex-shrink-0 me-3" style="font-size: 1.75em;"></i>
+               <div>
+                  <h3 class="fw-bold mb-3 fs-4 text-body-emphasis">Unique Link-Based Access</h3>
+                  <p>Each task list is assigned a unique URL, allowing instant access from any device. Just share the link to invite collaborators — no signups, no friction.</p>
+               </div>
+            </div>
+            <div class="col d-flex align-items-start">
+               <i class="bi bi-calendar3 text-body-secondary flex-shrink-0 me-3" style="font-size: 1.75em;"></i>
+               <div>
+                  <h3 class="fw-bold mb-3 fs-4 text-body-emphasis">Interactive Task Management</h3>
+                  <p>Easily add, edit, and complete tasks with a clean, responsive interface built using Bootstrap and JavaScript for fast, intuitive interactions.</p>
+               </div>
+            </div>
+            <div class="col d-flex align-items-start">
+               <i class="bi bi-house-door-fill text-body-secondary flex-shrink-0 me-3" style="font-size: 1.75em;"></i>
+               <div>
+                  <h3 class="fw-bold mb-3 fs-4 text-body-emphasis">Lightweight, Fast, and Backend-Driven</h3>
+                  <p>QuickTask is optimized for performance and simplicity — requiring no database setup and minimal hosting resources.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+         <p class="col-md-4 mb-0 text-body-secondary">© 2025 Company, Inc</p>
+         <a href="index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none" aria-label="Home">
+         <i class="bi bi-bookmark-star me-3" style="font-size: 1.5rem; color: gold;"></i>
+         </a>
+         <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+         </ul>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+      <script src="/tasklab-frontend/scripts/app.js"></script>
+   </body>
+</html>

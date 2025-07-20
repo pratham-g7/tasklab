@@ -2,7 +2,7 @@ const isLoggedIn = async () => {
     const token = localStorage.getItem("token");
     if (!token) return false;
     try {
-        const response = await fetch("http://127.0.0.1:3000/tasklab-backend/auth/verify_token", {
+        const response = await fetch("http://localhost:3000/auth/verify", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       if (res.ok) {
         localStorage.setItem('token', (await res.json()).token);
-        window.location.href = '/dashboard.html';
+        window.location.href = 'dashboard.html';
       } else {
         const data = await res.json();
         alert(data.error || 'Login failed');
